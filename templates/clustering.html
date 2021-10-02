@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Hasil Klasterisasi</h2>
+
+<h3>Tabel Statistik Hasil Klasterisasi</h3>
+{% for table in clustermean %}
+    {{ table|safe }}
+{% endfor %}
+
+<h3>Grafik</h3>
+<img src="static/images/plot-klaster.png" alt="Jumlah Data per Klaster"/>
+
+<h3>Contoh Data Klaster 0</h3>
+{% for table in klaster0 %}
+    {{ table|safe }}
+{% endfor %}
+
+<h3>Contoh Data Klaster 1</h3>
+{% for table in klaster1 %}
+    {{ table|safe }}
+{% endfor %}
+
+<h3>Contoh Data Klaster 2</h3>
+{% for table in klaster2 %}
+    {{ table|safe }}
+{% endfor %}
+        
+{% endblock %}

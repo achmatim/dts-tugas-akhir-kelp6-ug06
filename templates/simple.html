@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Analisis Studi Awal Mahasiswa</h1>
+
+{% for table in tables %}
+    {{titles[loop.index]}}
+    {{ table|safe }}
+{% endfor %}
+
+{% endblock %}

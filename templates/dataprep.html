@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Statistik Deskriptif</h2>
+{% for table in statsdata %}
+    {{ table|safe }}
+{% endfor %}
+
+<h2>Rerata IPS Mahasiswa</h2>
+<img src="static/images/plot-rerata.png" alt="Rerata IPS"/>
+
+<h2>Jumlah Data Mahasiswa Per Angkatan</h2>
+<img src="static/images/plot-perangkatan.png" alt="Grafik Per Angkatan"/>
+        
+
+{% endblock %}
